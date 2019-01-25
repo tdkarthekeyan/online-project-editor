@@ -7,7 +7,6 @@ const url = 'http://localhost:8000/upload';
 
 @Injectable()
 export class UploadService {
-
   constructor(private http: HttpClient ) { }
   public upload(files: Set<File>): {[key:string]:Observable<number>} {
     // this will be the our resulting map

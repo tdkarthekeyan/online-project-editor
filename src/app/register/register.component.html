@@ -1,0 +1,55 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+<mat-card>
+  <mat-card-content>
+      <form class="example-form">
+          <mat-card-header class="breadcrumb">
+              <mat-card-title>Register</mat-card-title>
+            </mat-card-header>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Firstname" [(ngModel)]="firstname" name="firstname" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Lastname" [(ngModel)]="lastname"type="password" name="lastname" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>User Name</mat-label>
+                  <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+        </table>
+      </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-button class="btn btn-link" color="primary">Register</button>
+      <button mat-button [routerLink]="['/login']" class="btn btn-link" color="secondary">Cancel</button>
+    </mat-card-actions>
+</mat-card>
+</div>
+</div>
+</div>
+

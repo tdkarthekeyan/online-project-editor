@@ -10,11 +10,17 @@ import { MaterialsModule } from './materials';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { UploadModule } from './upload/upload.module';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateProfileComponent } from './profile/update-profile/update-profile.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    ProfileComponent,
+    UpdateProfileComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
