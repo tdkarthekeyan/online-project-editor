@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { v4 } from 'uuid';
-import { FileElement } from '../file-explorer/model/file-element';
+import { FileElement } from '../file-explorer/model/element';
 import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs';
 

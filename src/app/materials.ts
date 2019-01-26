@@ -14,6 +14,7 @@ import {
   import { DragDropModule } from '@angular/cdk/drag-drop';
   import { MdcDrawerModule, MdcIconModule, MdcListModule, MdcCardModule, MdcTopAppBarModule, MdcIconButtonModule } from '@angular-mdc/web';
   import { NgSrcModule } from 'ng-src';
+  import { FileService } from './service/file.service';
 @NgModule({
     imports: [
         CommonModule,
@@ -75,5 +76,6 @@ import {
         MdcTopAppBarModule,
         MdcIconButtonModule
     ],
+    providers: [FileService]
 })
 export class MaterialsModule {}

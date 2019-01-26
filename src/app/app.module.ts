@@ -13,6 +13,8 @@ import { UploadModule } from './upload/upload.module';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateProfileComponent } from './profile/update-profile/update-profile.component';
 import { RegisterComponent } from './register/register.component';
+import { FileExplorerModule } from './file-explorer/file-explorer.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { RegisterComponent } from './register/register.component';
     MaterialsModule,
     NgbModule,
     FormsModule,
-    UploadModule
+    UploadModule,
+    FileExplorerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

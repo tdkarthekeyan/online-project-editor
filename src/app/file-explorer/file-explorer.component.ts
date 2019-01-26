@@ -1,6 +1,7 @@
-import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
-import { FileElement } from '../file-explorer/model/file-element';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FileElement } from './model/element';
 import { MatDialog } from '@angular/material/dialog';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { NewFolderDialogComponent } from '../file-explorer/modals/new-folder-dialog/new-folder-dialog.component';
 import { RenameDialogComponent } from '../file-explorer/modals/rename-dialog/rename-dialog.component';
 
@@ -10,7 +11,8 @@ import { RenameDialogComponent } from '../file-explorer/modals/rename-dialog/ren
   styleUrls: ['./file-explorer.component.css']
 })
 export class FileExplorerComponent {
-    constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {}
+
   @Input() fileElements: FileElement[];
   @Input() canNavigateUp: string;
   @Input() path: string;
@@ -47,7 +49,6 @@ export class FileExplorerComponent {
         this.folderAdded.emit({ name: res });
       }
     });
-
   }
 
   openRenameDialog(element: FileElement) {
@@ -58,12 +59,10 @@ export class FileExplorerComponent {
         this.elementRenamed.emit(element);
       }
     });
-
   }
-  openMenu(event: MouseEvent, element: FileElement, viewChild: MatMenuTrigger) {
-        event.preventDefault();
-        viewChild.openMenu();
 
+  openMenu(event: MouseEvent, viewChild: MatMenuTrigger) {
+    event.preventDefault();
+    viewChild.openMenu();
   }
-  
 }

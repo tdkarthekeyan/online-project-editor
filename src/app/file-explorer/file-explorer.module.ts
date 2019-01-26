@@ -13,10 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { FileExplorerComponent } from './file-explorer.component';
 import { NewFolderDialogComponent } from './modals/new-folder-dialog/new-folder-dialog.component';
 import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.component';
+
 @NgModule({
-  declarations: [FileExplorerComponent, NewFolderDialogComponent, RenameDialogComponent],
-  exports: [FileExplorerComponent],
-  entryComponents: [],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -29,6 +27,9 @@ import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.comp
     MatInputModule,
     FormsModule,
     MatButtonModule
-  ]
+  ],
+  declarations: [FileExplorerComponent, NewFolderDialogComponent, RenameDialogComponent],
+  exports: [FileExplorerComponent],
+  entryComponents: [NewFolderDialogComponent, RenameDialogComponent]
 })
 export class FileExplorerModule { }
